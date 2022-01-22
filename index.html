@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sorting Algos</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="header">
+      <input
+        id="SizeOfArray"
+        type="range"
+        min="20"
+        max="150"
+        step="1"
+        value="80"
+      />
+      <div class="ButtonsCont">
+        <button id="GenerateData" class="GenerateData">Generate Data</button>
+        <button id="Merge" class="Merge">Merge Sort</button>
+        <button id="Bubble" class="Bubble">Bubble Sort</button>
+      </div>
+    </div>
+    <div class="content">
+      <div id="ArrayContainer" class="ArrayContainer"></div>
+    </div>
+    <script type="module" src="script.js"></script>
+  </body>
+</html>
