@@ -9,23 +9,47 @@
   </head>
   <body>
     <div class="header">
-      <input
-        id="SizeOfArray"
-        type="range"
-        min="20"
-        max="150"
-        step="1"
-        value="80"
-      />
+      <h3>[ Sorting Visualizer ]</h3>
+
+      <div>
+        <div class="SelectionBox">
+          <p class="Label">Data Size:</p>
+          <input
+            id="SizeOfArray"
+            type="range"
+            min="20"
+            max="150"
+            step="1"
+            value="80"
+          />
+        </div>
+        <div class="SelectionBox">
+          <p class="Label">Speed:</p>
+          <input
+            id="AlgoSpeed"
+            type="range"
+            min="1"
+            max="5"
+            step="1"
+            value="4"
+          />
+        </div>
+      </div>
+
       <div class="ButtonsCont">
         <button id="GenerateData" class="GenerateData">Generate Data</button>
         <button id="Merge" class="Merge">Merge Sort</button>
         <button id="Bubble" class="Bubble">Bubble Sort</button>
       </div>
     </div>
+    <div class="TCBox">
+      <div id="TCLabel" class="TCLabel"></div>
+    </div>
     <div class="content">
       <div id="ArrayContainer" class="ArrayContainer"></div>
     </div>
-    <script type="module" src="script.js"></script>
+    <script src="script.js"></script>
+    <script src="algorithms.js"></script>
+    <script src="animation.js"></script>
   </body>
 </html>

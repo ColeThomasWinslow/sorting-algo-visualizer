@@ -1,4 +1,3 @@
-import { MergeSort, BubbleSort } from "./algorithms.js";
 const Container = document.getElementById("ArrayContainer");
 const GenerateDataBtn = document.getElementById("GenerateData");
 const AlgoButtons = document.querySelectorAll(".ButtonsCont button");
@@ -8,7 +7,7 @@ let ArrayInput = document.getElementById("SizeOfArray");
 // Established Arrays
 let Bars = [];
 let BarValues = [];
-
+var margin_size;
 // EventListener For New Data
 GenerateDataBtn.addEventListener("click", CreateNewArray);
 // EventListener For Changing Input Value
@@ -20,10 +19,17 @@ ArrayInput.addEventListener("input", updateSizeOfArray);
 function CreateNewArray() {
   Container.innerHTML = "";
   for (let i = 0; i < SizeOfArray; i++) {
-    BarValues[i] = Math.floor(Math.random(10 - 200) * 200);
+    BarValues[i] = Math.floor(Math.random(10 - 300) * 300);
     Bars[i] = document.createElement("div");
     Bars[i].classList.add("bar");
-    Bars[i].style.height = `${BarValues[i]}px`;
+    Bars[i].style =
+      " margin:0% " +
+      margin_size +
+      "%; background-color:rgb(120, 148, 211); width:" +
+      (100 / SizeOfArray - 2 * margin_size) +
+      "%; height:" +
+      BarValues[i] +
+      "px;";
     Container.append(Bars[i]);
   }
 }
@@ -43,9 +49,14 @@ for (var i = 0; i < AlgoButtons.length; i++) {
 function RunChosenAlgo() {
   switch (this.innerHTML) {
     case "Merge Sort":
+      TCLabel.classList.add("fade");
+      TCLabel.innerHTML = "0(n)";
       MergeSort();
+
       break;
     case "Bubble Sort":
+      TCLabel.classList.add("fade");
+      TCLabel.innerHTML = "0(n)";
       BubbleSort();
       break;
   }
