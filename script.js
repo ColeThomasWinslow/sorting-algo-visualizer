@@ -50,14 +50,19 @@ function RunChosenAlgo() {
   switch (this.innerHTML) {
     case "Merge Sort":
       TCLabel.classList.add("fade");
-      TCLabel.innerHTML = "0(n)";
+      TCLabel.innerHTML = "O(n*Log n)";
       MergeSort();
 
       break;
     case "Bubble Sort":
       TCLabel.classList.add("fade");
-      TCLabel.innerHTML = "0(n)";
+      TCLabel.innerHTML = "O(n^2)";
       BubbleSort();
+      break;
+    case "Selection Sort":
+      TCLabel.classList.add("fade");
+      TCLabel.innerHTML = "O(n^2)";
+      SelectionSort();
       break;
   }
 }
