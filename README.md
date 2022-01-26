@@ -10,7 +10,7 @@
 
 ## Visualizer Overview
 <div style="text-align:center; width:100%;">
-<p>Select the amount of items that you want to be included in the array and click generate data.
+<p style="text-align:center;">Select the amount of items that you want to be included in the array and click generate data.
 After getting the newly created values apply a sorting algorithm to the data set.</p>
-<p>Then watch how each algorithm behaves differently with each process slowed down</p>
+<p style="text-align:center;">Then watch how each algorithm behaves differently with each process slowed down</p>
 </div
