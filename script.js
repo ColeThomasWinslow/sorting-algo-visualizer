@@ -18,19 +18,38 @@ ArrayInput.addEventListener("input", updateSizeOfArray);
 // Then create a div for the length of the array styling the height with the BarValues.
 function CreateNewArray() {
   Container.innerHTML = "";
-  for (let i = 0; i < SizeOfArray; i++) {
-    BarValues[i] = Math.floor(Math.random(10 - 300) * 300);
-    Bars[i] = document.createElement("div");
-    Bars[i].classList.add("bar");
-    Bars[i].style =
-      " margin:0% " +
-      margin_size +
-      "%; background-color:rgb(120, 148, 211); width:" +
-      (100 / SizeOfArray - 2 * margin_size) +
-      "%; height:" +
-      BarValues[i] +
-      "px;";
-    Container.append(Bars[i]);
+  const width = window.innerWidth;
+  console.log(width);
+  if (width < 600) {
+    for (let i = 0; i < 40; i++) {
+      BarValues[i] = Math.floor(Math.random(10 - 300) * 300);
+      Bars[i] = document.createElement("div");
+      Bars[i].classList.add("bar");
+      Bars[i].style =
+        " margin:0% " +
+        margin_size +
+        "%; background-color:rgb(120, 148, 211); width:" +
+        (100 / SizeOfArray - 2 * margin_size) +
+        "%; height:" +
+        BarValues[i] +
+        "px;";
+      Container.append(Bars[i]);
+    }
+  } else {
+    for (let i = 0; i < SizeOfArray; i++) {
+      BarValues[i] = Math.floor(Math.random(10 - 300) * 300);
+      Bars[i] = document.createElement("div");
+      Bars[i].classList.add("bar");
+      Bars[i].style =
+        " margin:0% " +
+        margin_size +
+        "%; background-color:rgb(120, 148, 211); width:" +
+        (100 / SizeOfArray - 2 * margin_size) +
+        "%; height:" +
+        BarValues[i] +
+        "px;";
+      Container.append(Bars[i]);
+    }
   }
 }
 // Updates the Size From the input change of the event listener // Line: 15
