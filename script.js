@@ -19,9 +19,9 @@ ArrayInput.addEventListener("input", updateSizeOfArray);
 function CreateNewArray() {
   Container.innerHTML = "";
   const width = window.innerWidth;
-  console.log(width);
+
   if (width < 600) {
-    for (let i = 0; i < 40; i++) {
+    for (let i = 0; i < 22; i++) {
       BarValues[i] = Math.floor(Math.random(10 - 300) * 300);
       Bars[i] = document.createElement("div");
       Bars[i].classList.add("bar");
